@@ -43,7 +43,7 @@ const image = async (loadInfo, options = {}) => {
 		save: (saveInfo, options = {}) => save(buf, saveInfo, options),
 		toBase64: () => toBase64(buf),
 		toBase64Binary: () => toBase64Binary(buf),
-		toBuf: (buf) => buf,
+		toBuf: () => buf,
 	};
 };
 

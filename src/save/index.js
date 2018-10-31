@@ -1,4 +1,4 @@
-const save = (buf, saveInfo, options = {}) => {
+const save = (buf, saveInfo, options) => {
 	if (saveInfo.bucket && saveInfo.key) {
 		return require('./s3')(buf, saveInfo, options);
 	} else if (typeof saveInfo === 'string') {

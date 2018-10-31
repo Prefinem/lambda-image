@@ -5,13 +5,10 @@ const resizeAndCropCenter = async (buf, width, height) => {
 	const { height: originalHeight, width: originalWidth } = await getDimensions(buf);
 	const originalRatio = originalWidth / originalHeight;
 	const newRatio = width / height;
-	const heightOrWidth =
-		Math.abs(originalRatio * originalHeight - newRatio * height) <
-		Math.abs(originalRatio * originalWidth - newRatio * width)
-			? 'height'
-			: 'width';
-	const resizeHeight = heightOrWidth === 'height' ? height : null;
-	const resizeWidth = heightOrWidth === 'width' ? width : null;
+	const heightDelta = originalRatio * originalHeight - newRatio * height;
+	const widthDelta = originalRatio * originalWidth - newRatio * width;
+	const resizeHeight = heightDelta < widthDelta ? height : null;
+	const resizeWidth = heightDelta > widthDelta ? width : null;
 
 	const newBuf = await new Promise((resolve, reject) => {
 		gm(buf)
