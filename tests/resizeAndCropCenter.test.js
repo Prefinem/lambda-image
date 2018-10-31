@@ -5,6 +5,8 @@ const image = require('./../src/index');
 const fs = require('fs-extra');
 
 test('test resizeAndCropCenter', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.resizeAndCropCenter(256, 128));
 	const temp = path.join(tempPath, 'resizeAndCropCenter.png');
@@ -19,6 +21,8 @@ test('test resizeAndCropCenter', async () => {
 });
 
 test('test resizeAndCropCenter2', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.resizeAndCropCenter(512, 256));
 	const temp = path.join(tempPath, 'resizeAndCropCenter2.png');
@@ -33,6 +37,8 @@ test('test resizeAndCropCenter2', async () => {
 });
 
 test('test resizeAndCropCenter3', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.resizeAndCropCenter(128, 256));
 	const temp = path.join(tempPath, 'resizeAndCropCenter3.png');

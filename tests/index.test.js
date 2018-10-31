@@ -35,12 +35,8 @@ test('get all meta', async () => {
 test('identify', async () => {
 	const logo = await image(logoPath);
 	const identity = await logo.identify();
-	const result = require('./identity.json');
 
-	delete identity['Elapsed Time'];
-	delete identity['Pixels Per Second'];
-
-	expect(identity).toEqual(result);
+	expect(identity.Format).toEqual('PNG (Portable Network Graphics)');
 });
 
 test('throw error when no image provided', () => {

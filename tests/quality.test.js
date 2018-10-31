@@ -5,6 +5,8 @@ const image = require('./../src/index');
 const fs = require('fs-extra');
 
 test('test quality', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.quality(80));
 	const temp = path.join(tempPath, 'quality1.png');

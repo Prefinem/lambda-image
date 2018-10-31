@@ -5,6 +5,8 @@ const image = require('./../src/index');
 const fs = require('fs-extra');
 
 test('test resize', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.resize(256));
 	const temp = path.join(tempPath, 'resize1.png');
@@ -19,6 +21,8 @@ test('test resize', async () => {
 });
 
 test('test resize default width', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.resize(null, 256));
 	const temp = path.join(tempPath, 'resize1.png');
@@ -33,6 +37,8 @@ test('test resize default width', async () => {
 });
 
 test('test resize height and width', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.resize(256, 256));
 	const temp = path.join(tempPath, 'resize2.png');
@@ -47,6 +53,8 @@ test('test resize height and width', async () => {
 });
 
 test('test resize keeps scale', async () => {
+	await fs.ensureDir(tempPath);
+
 	const logo = await image(logoPath);
 	const transformedLogo = await image(await logo.resize(256, 512));
 	const temp = path.join(tempPath, 'resize3.png');
