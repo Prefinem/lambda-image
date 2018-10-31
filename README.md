@@ -11,7 +11,7 @@ https://prefinem.com/simple-icon-generator/#eyJiYWNrZ3JvdW5kQ29sb3IiOiJyZ2IoMjAz
 
 [![Version](https://badge.fury.io/js/lambda-image.svg)](https://npmjs.org/package/lambda-image) [![Build Status](https://travis-ci.org/Prefinem/lambda-image.svg)](https://travis-ci.org/Prefinem/lambda-image)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/bde2cb4374583f7f2288/maintainability)](https://codeclimate.com/github/Prefinem/lambda-image/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/bde2cb4374583f7f2288/test_coverage)](https://codeclimate.com/github/Prefinem/lambda-image/test_coverage) [![Greenkeeper badge](https://badges.greenkeeper.io/Prefinem/lambda-image.svg)](https://greenkeeper.io/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9755ccf58efb3b99f223/maintainability)](https://codeclimate.com/github/Prefinem/lambda-image/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/9755ccf58efb3b99f223/test_coverage)](https://codeclimate.com/github/Prefinem/lambda-image/test_coverage) [![Greenkeeper badge](https://badges.greenkeeper.io/Prefinem/lambda-image.svg)](https://greenkeeper.io/)
 
 ![Weekly Downloads](https://img.shields.io/npm/dw/lambda-image.svg) ![Monthly Downloads](https://img.shields.io/npm/dm/lambda-image.svg) ![Yearly Downloads](https://img.shields.io/npm/dy/lambda-image.svg)
 
