@@ -7,19 +7,42 @@ https://prefinem.com/simple-icon-generator/#eyJiYWNrZ3JvdW5kQ29sb3IiOiJyZ2IoMjAz
 -->
 </h1>
 
-[![npm pack age](https://nodei.co/npm/lambda-image.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/package/lambda-image)
+<!-- NPM -->
 
-[![Version](https://badge.fury.io/js/lambda-image.svg)](https://npmjs.org/package/lambda-image) [![Build Status](https://travis-ci.org/Prefinem/lambda-image.svg)](https://travis-ci.org/Prefinem/lambda-image)
+[![Version](https://flat.badgen.net/npm/v/lambda-image)](https://npmjs.org/package/lambda-image)
+[![Version](https://flat.badgen.net/npm/dw/lambda-image)](https://npmjs.org/package/lambda-image)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/9755ccf58efb3b99f223/maintainability)](https://codeclimate.com/github/Prefinem/lambda-image/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/9755ccf58efb3b99f223/test_coverage)](https://codeclimate.com/github/Prefinem/lambda-image/test_coverage) [![Greenkeeper badge](https://badges.greenkeeper.io/Prefinem/lambda-image.svg)](https://greenkeeper.io/)
+<!-- GitHub -->
 
-![Weekly Downloads](https://img.shields.io/npm/dw/lambda-image.svg) ![Monthly Downloads](https://img.shields.io/npm/dm/lambda-image.svg) ![Yearly Downloads](https://img.shields.io/npm/dy/lambda-image.svg)
+[![Issues](https://flat.badgen.net/github/issues/Prefinem/lambda-image)](https://github.com/Prefinem/lambda-image)
+[![Stars](https://flat.badgen.net/github/stars/Prefinem/lambda-image)](https://github.com/Prefinem/lambda-image)
+[![Open PRs](https://flat.badgen.net/github/open-prs/Prefinem/lambda-image)](https://github.com/Prefinem/lambda-image)
+[![License](https://flat.badgen.net/github/license/Prefinem/lambda-image)](https://github.com/Prefinem/lambda-image)
 
-![Issues](https://img.shields.io/github/issues/Prefinem/lambda-image.svg) ![Pull Requests](https://img.shields.io/github/issues-pr/Prefinem/lambda-image.svg)
+<!-- Dependencies -->
 
-![Dependencies](https://david-dm.org/Prefinem/lambda-image.svg) ![Dev Dependencies](https://david-dm.org/Prefinem/lambda-image/dev-status.svg)
+[![Dependencies](https://flat.badgen.net/david/dep/Prefinem/lambda-image)](https://david-dm.org/Prefinem/lambda-image)
+[![DevDependencies](https://flat.badgen.net/david/dev/Prefinem/lambda-image)](https://david-dm.org/Prefinem/lambda-image?type=dev)
+[![PeerDependencies](https://flat.badgen.net/david/peer/Prefinem/lambda-image)](https://david-dm.org/Prefinem/lambda-image?type=peer)
 
-[![Install Size](https://badgen.now.sh/badge/install%20size/34.3%20kB/44CC11)](https://packagephobia.now.sh/result?p=lambda-image)
+<!-- PackagePhobia -->
+
+[![Install Size](https://flat.badgen.net/packagephobia/install/lambda-image)](https://packagephobia.now.sh/result?p=lambda-image)
+[![Publish Size](https://flat.badgen.net/packagephobia/publish/lambda-image)](https://packagephobia.now.sh/result?p=lambda-image)
+
+<!-- Travis -->
+
+[![Build Status](https://flat.badgen.net/travis/Prefinem/lambda-image)](https://travis-ci.com/Prefinem/lambda-image)
+
+<!-- CodeCov -->
+
+[![Code Coverage](https://flat.badgen.net/codecov/c/github/Prefinem/lambda-image)](https://codecov.io/gh/Prefinem/lambda-image)
+
+<!-- CodeClimate -->
+
+[![Technical Debt](https://flat.badgen.net/codeclimate/tech-debt/Prefinem/lambda-image)](https://codeclimate.com/github/Prefinem/lambda-image)
+[![Maintainability](https://flat.badgen.net/codeclimate/maintainability/Prefinem/lambda-image)](https://codeclimate.com/github/Prefinem/lambda-image)
+[![Coverage](https://flat.badgen.net/codeclimate/coverage/Prefinem/lambda-image)](https://codeclimate.com/github/Prefinem/lambda-image)
 
 Lambda Image is a simple image class to allow to easily manipulate images on AWS Lambda
 
@@ -33,4 +56,3 @@ If you wish to be able to load and save to s3, (and you aren't on aws lambda) yo
 ```js
 const Image = require('lambda-image');
 ```
-
