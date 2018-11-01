@@ -16,6 +16,7 @@ test('test quality', async () => {
 	const testImage = await image(temp);
 	const results = await testImage.getSize();
 
-	expect(results).toEqual(5826);
+	expect(results).toBeLessThan(6000);
+	expect(results).toBeGreaterThan(5700);
 	await fs.remove(temp);
 });
