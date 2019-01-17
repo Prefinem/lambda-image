@@ -19,8 +19,8 @@ const resizeAndCropCenter = require('./transform/resizeAndCropCenter');
 const toBase64 = require('./convert/base64');
 const toBase64Binary = require('./convert/base64Binary');
 
-const image = async (loadInfo, options = {}) => {
-	const buf = await load(loadInfo, options);
+const image = async (loadInfo, loadOptions = {}) => {
+	const buf = await load(loadInfo, loadOptions);
 
 	if (!(buf instanceof Buffer)) {
 		throw new Error('Not a valid image');
@@ -40,7 +40,7 @@ const image = async (loadInfo, options = {}) => {
 		quality: (percentage) => quality(buf, percentage),
 		resize: (width, height) => resize(buf, width, height),
 		resizeAndCropCenter: (width, height) => resizeAndCropCenter(buf, width, height),
-		save: (saveInfo, options = {}) => save(buf, saveInfo, options),
+		save: (saveInfo, saveOptions = loadOptions) => save(buf, saveInfo, saveOptions),
 		toBase64: () => toBase64(buf),
 		toBase64Binary: () => toBase64Binary(buf),
 		toBuf: () => buf,
