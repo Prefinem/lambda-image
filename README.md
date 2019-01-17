@@ -54,5 +54,70 @@ If you wish to be able to load and save to s3, (and you aren't on aws lambda) yo
 ## Getting Started
 
 ```js
-const Image = require('lambda-image');
+const lambdaImage = require('lambda-image');
+
+const image = await lambdaImage('/path/to/image.png');
+
+const { height, width } = await image.getDimensions();
+
+const resizedImage = await lambdaImage(await image.resize(512, 512));
+
+await resizedImage.save({ bucket: 's3bucker', key: await resizeImage.getHashKey() });
+```
+
+## lambdaImage(loadInfo, loadOptions)
+
+Returns a image object. Must be called with `await`
+
+`loadInfo` can be either a
+
+-   buffer
+-   object with `{ bucket, key }` for an s3 file
+-   base64 image with `data:{contentType};base64` prefix
+-   url
+-   file path
+
+If a url is provided, you must provide the [got](https://npmjs.com/package/got) library in your dependecies.
+
+`loadOptions` is an object that can contain a profile of your aws credentials
+
+```js
+const options = {
+	profile: 'default',
+};
+```
+
+## API
+
+-   `image.getContentType()` Get the mime type
+-   `image.getDimensions()` Get the dimensions in an object `{ height, width }`
+-   `image.getExt()` Get the image extension
+-   `image.getHash()` Get the md5 hash of the image
+-   `image.getHashKey()` Get the save key based on the md5 hash `2C2A8686BFA31A2AE5F55A7F60009E14 => 2/C/2C2A8686BFA31A2AE5F55A7F60009E14.png`
+-   `image.getHeight()` Get the height of the image
+-   `image.getSize()` Get the image file size in bytes
+-   `image.getType()` Get the image extension
+-   `image.getWidth()` Get the width of the image
+-   `image.identify()` Get the data from `imagemagick identify`
+-   `image.quality(percentage)` Returns the buffer for the image when quality of percentage is applied
+-   `image.resize(width, height)` Returns the buffer for the image when resized to width / height - **Does not crop**
+-   `image.resizeAndCropCenter(width, height)` Returns the buffer for the image when resized to width / height after cropping
+-   `image.save(saveInfo, saveOptions = loadOptions)` Saves the image based on the saveInfo and saveOptions
+-   `image.toBase64()` Converts the image to base64 with the `data:{contentType};base64` prefix
+-   `image.toBase64Binary()` Converts the image to base64 without the `data:{contentType};base64` prefix
+-   `image.toBuf()` Converts the image to a buffer
+
+## image.save(saveInfo, saveOptions)
+
+`saveInfo` can be either a
+
+-   object with `{ bucket, key }` to save to an s3 bucket
+-   file path
+
+`loadOptions` is an object that can contain a profile of your aws credentials. This will default to `saveOptions`
+
+```js
+const options = {
+	profile: 'default',
+};
 ```
