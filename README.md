@@ -46,10 +46,13 @@ https://prefinem.com/simple-icon-generator/#eyJiYWNrZ3JvdW5kQ29sb3IiOiJyZ2IoMjAz
 
 Lambda Image is a simple image class to allow to easily manipulate images on AWS Lambda
 
-## WARNING
+## WARNINGS
 
 If you wish to download an image from a url, you must install [got](https://npmjs.com/package/got) as a package in your project.
+
 If you wish to be able to load and save to s3, (and you aren't on aws lambda) you must install `aws-sdk` as a package in your project.
+
+If you are testing locally, ensure you have imagemagick installed
 
 ## Getting Started
 
