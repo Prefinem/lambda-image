@@ -1,10 +1,11 @@
 plugins:
-  eslint:
-    enabled: true
-    channel: "eslint-4"
-  config:
-    config: .eslintrc.json
+    eslint:
+        enabled: true
+        channel: 'eslint-5'
+    config:
+        config: .eslintrc.json
 exclude_patterns:
-- "tests/"
-- "spec/"
-- "node_modules/"
+    - 'tests/'
+    - 'spec/'
+    - 'node_modules/'
+    - 'docs/'
