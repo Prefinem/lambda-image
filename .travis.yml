@@ -3,7 +3,7 @@ env:
     - CC_TEST_REPORTER_ID=abc6e07c4b99506e38eb1d4296e3ecf26a386bdcd218237eefab1a0ea770ac6d
 language: node_js
 node_js:
-  - 9
+  - 8
 cache: yarn
 before_install:
   - chmod +x ./aws_credentials.sh

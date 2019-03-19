@@ -65,7 +65,7 @@ const { height, width } = await image.getDimensions();
 
 const resizedImage = await lambdaImage(await image.resize(512, 512));
 
-await resizedImage.save({ bucket: 's3bucker', key: await resizeImage.getHashKey() });
+await resizedImage.save({ bucket: 's3bucket', key: await resizeImage.getHashKey() });
 ```
 
 ## lambdaImage(loadInfo, loadOptions)
@@ -92,6 +92,7 @@ const options = {
 
 ## API
 
+-   `image.crop(width, height, gravity)` Returns the buffer for the image when crop is applied
 -   `image.getContentType()` Get the mime type
 -   `image.getDimensions()` Get the dimensions in an object `{ height, width }`
 -   `image.getExt()` Get the image extension

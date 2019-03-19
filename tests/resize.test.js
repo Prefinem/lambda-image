@@ -3,6 +3,9 @@ const logoPath = path.resolve(path.join(__dirname, './../docs/logo.png'));
 const tempPath = path.resolve(path.join(__dirname, './../temp'));
 const image = require('./../src/index');
 const fs = require('fs-extra');
+const { toMatchImageSnapshot } = require('jest-image-snapshot');
+
+expect.extend({ toMatchImageSnapshot });
 
 test('test resize', async () => {
 	await fs.ensureDir(tempPath);
@@ -17,6 +20,7 @@ test('test resize', async () => {
 	const dimensions = await testImage.getDimensions();
 
 	expect(dimensions).toEqual({ height: 256, width: 256 });
+	expect(transformedLogo.toBuf()).toMatchImageSnapshot();
 	await fs.remove(temp);
 });
 
@@ -33,6 +37,7 @@ test('test resize default width', async () => {
 	const dimensions = await testImage.getDimensions();
 
 	expect(dimensions).toEqual({ height: 256, width: 256 });
+	expect(transformedLogo.toBuf()).toMatchImageSnapshot();
 	await fs.remove(temp);
 });
 
@@ -49,6 +54,7 @@ test('test resize height and width', async () => {
 	const dimensions = await testImage.getDimensions();
 
 	expect(dimensions).toEqual({ height: 256, width: 256 });
+	expect(transformedLogo.toBuf()).toMatchImageSnapshot();
 	await fs.remove(temp);
 });
 
@@ -65,5 +71,6 @@ test('test resize keeps scale', async () => {
 	const dimensions = await testImage.getDimensions();
 
 	expect(dimensions).toEqual({ height: 256, width: 256 });
+	expect(transformedLogo.toBuf()).toMatchImageSnapshot();
 	await fs.remove(temp);
 });

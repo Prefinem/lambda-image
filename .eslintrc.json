@@ -5,15 +5,14 @@
 		"node": true
 	},
 	"extends": ["eslint:all", "prettier", "plugin:jest/recommended"],
-	"parser": "babel-eslint",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
 		},
-		"ecmaVersion": 6,
+		"ecmaVersion": 10,
 		"sourceType": "module"
 	},
-	"plugins": ["babel", "jest"],
+	"plugins": ["jest"],
 	"rules": {
 		"array-element-newline": "off",
 		"capitalized-comments": "off",
@@ -54,10 +53,5 @@
 		"quotes": "off",
 		"radix": "off",
 		"require-jsdoc": "off"
-	},
-	"settings": {
-		"react": {
-			"version": "16.3"
-		}
 	}
 }

@@ -12,6 +12,7 @@ const identify = require('./meta/identify');
 const load = require('./load');
 const save = require('./save');
 
+const crop = require('./transform/crop');
 const quality = require('./transform/quality');
 const resize = require('./transform/resize');
 const resizeAndCropCenter = require('./transform/resizeAndCropCenter');
@@ -27,6 +28,7 @@ const image = async (loadInfo, loadOptions = {}) => {
 	}
 
 	return {
+		crop: (width, height, gravity) => crop(buf, { gravity, height, width }),
 		getContentType: () => getContentType(buf),
 		getDimensions: () => getDimensions(buf),
 		getExt: () => getType(buf),
@@ -37,9 +39,9 @@ const image = async (loadInfo, loadOptions = {}) => {
 		getType: () => getType(buf),
 		getWidth: () => getWidth(buf),
 		identify: () => identify(buf),
-		quality: (percentage) => quality(buf, percentage),
-		resize: (width, height) => resize(buf, width, height),
-		resizeAndCropCenter: (width, height) => resizeAndCropCenter(buf, width, height),
+		quality: (percentage) => quality(buf, { percentage }),
+		resize: (width, height) => resize(buf, { height, width }),
+		resizeAndCropCenter: (width, height) => resizeAndCropCenter(buf, { height, width }),
 		save: (saveInfo, saveOptions = loadOptions) => save(buf, saveInfo, saveOptions),
 		toBase64: () => toBase64(buf),
 		toBase64Binary: () => toBase64Binary(buf),
