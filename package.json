@@ -36,11 +36,11 @@
 			"git add"
 		]
 	},
-	"main": "index.js",
+	"main": "src/index.js",
 	"name": "lambda-image",
 	"peerDependencies": {
-		"aws-sdk": ">= 2",
-		"got": ">= 9"
+		"aws-sdk": "^2.423.0",
+		"got": "^9.6.0"
 	},
 	"repository": {
 		"type": "git",
