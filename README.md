@@ -30,9 +30,9 @@ https://prefinem.com/simple-icon-generator/#eyJiYWNrZ3JvdW5kQ29sb3IiOiJyZ2IoMjAz
 [![Install Size](https://flat.badgen.net/packagephobia/install/lambda-image)](https://packagephobia.now.sh/result?p=lambda-image)
 [![Publish Size](https://flat.badgen.net/packagephobia/publish/lambda-image)](https://packagephobia.now.sh/result?p=lambda-image)
 
-<!-- Travis -->
+<!-- CircleCi -->
 
-[![Build Status](https://flat.badgen.net/travis/Prefinem/lambda-image)](https://travis-ci.com/Prefinem/lambda-image)
+[![Build Status](https://flat.badgen.net/circleci/github/Prefinem/lambda-image)](https://circleci.com/gh/Prefinem/lambda-image)
 
 <!-- CodeCov -->
 
