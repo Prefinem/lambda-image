@@ -16,6 +16,7 @@ const crop = require('./transform/crop');
 const quality = require('./transform/quality');
 const resize = require('./transform/resize');
 const resizeAndCropCenter = require('./transform/resizeAndCropCenter');
+const rotate = require('./transform/rotate');
 
 const toBase64 = require('./convert/base64');
 const toBase64Binary = require('./convert/base64Binary');
@@ -42,6 +43,7 @@ const image = async (loadInfo, loadOptions = {}) => {
 		quality: (percentage) => quality(buf, { percentage }),
 		resize: (width, height) => resize(buf, { height, width }),
 		resizeAndCropCenter: (width, height) => resizeAndCropCenter(buf, { height, width }),
+		rotate: (degrees, color) => rotate(buf, { color, degrees }),
 		save: (saveInfo, saveOptions = loadOptions) => save(buf, saveInfo, saveOptions),
 		toBase64: () => toBase64(buf),
 		toBase64Binary: () => toBase64Binary(buf),

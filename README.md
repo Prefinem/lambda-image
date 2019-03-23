@@ -106,6 +106,7 @@ const options = {
 -   `image.quality(percentage)` Returns the buffer for the image when quality of percentage is applied
 -   `image.resize(width, height)` Returns the buffer for the image when resized to width / height - **Does not crop**
 -   `image.resizeAndCropCenter(width, height)` Returns the buffer for the image when resized to width / height after cropping
+-   `image.rotate(degrees, color)` Returns the buffer for the image when rotated. Color is used to fill in background color (defualts to transparent)
 -   `image.save(saveInfo, saveOptions = loadOptions)` Saves the image based on the saveInfo and saveOptions
 -   `image.toBase64()` Converts the image to base64 with the `data:{contentType};base64` prefix
 -   `image.toBase64Binary()` Converts the image to base64 without the `data:{contentType};base64` prefix

@@ -41,7 +41,7 @@
 	"main": "src/index.js",
 	"name": "lambda-image",
 	"peerDependencies": {
-		"aws-sdk": "^2.423.0",
+		"aws-sdk": "^2.427.0",
 		"got": "^9.6.0"
 	},
 	"repository": {
