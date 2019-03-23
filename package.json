@@ -57,5 +57,5 @@
 		"staged": "lint-staged",
 		"test": "yarn add got aws-sdk -P && jest --coverage"
 	},
-	"version": "2.0.1"
+	"version": "2.1.0"
 }
