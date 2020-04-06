@@ -21,7 +21,7 @@
 		"jest-junit": "10.0.0",
 		"jest-resolve": "25.2.6",
 		"lint-staged": "10.1.1",
-		"prettier": "2.0.2"
+		"prettier": "2.0.4"
 	},
 	"homepage": "https://github.com/Prefinem/lambda-image",
 	"husky": {
