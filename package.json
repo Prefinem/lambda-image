@@ -10,7 +10,7 @@
 	"description": "Lambda Image Class for easy image manipulation on AWS Lambda",
 	"devDependencies": {
 		"codecov": "3.6.5",
-		"eslint": "6.8.0",
+		"eslint": "7.0.0",
 		"eslint-config-prettier": "6.11.0",
 		"eslint-plugin-jest": "23.9.0",
 		"fs-extra": "9.0.0",
