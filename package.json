@@ -20,7 +20,7 @@
 		"jest-image-snapshot": "4.0.0",
 		"jest-junit": "10.0.0",
 		"jest-resolve": "26.0.1",
-		"lint-staged": "10.2.4",
+		"lint-staged": "10.2.6",
 		"prettier": "2.0.5"
 	},
 	"homepage": "https://github.com/Prefinem/lambda-image",
